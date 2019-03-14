@@ -1,0 +1,18 @@
+#!/bin/sh -e
+
+BUILD=build
+version=$(cat VERSION)
+size=$(du -csh deb/ | sed '1!d' | grep -oe "^[0-9]*")
+
+rm -Rf $BUILD
+mkdir -p $BUILD/release $BUILD/tmp
+
+echo "Building version $version..."
+
+cp -R deb/* $BUILD/tmp
+sed -i 's/{{version}}/'${version}'/g;s/{{size}}/'${size}'/g' $BUILD/tmp/DEBIAN/control
+
+chmod 0555 -f $BUILD/tmp/DEBIAN/p*
+fakeroot dpkg-deb -b -z9 $BUILD/tmp $BUILD/release
+
+echo done

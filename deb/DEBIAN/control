@@ -1,0 +1,9 @@
+Package: snapraid-runner
+Version: {{version}}
+Section: extras
+Priority: standard
+Architecture: all
+Depends: snapraid
+Maintainer: Andoni del Olmo <andoni.delolmo@gmail.com>
+Installed-Size: {{size}}
+Description: Automate SnapRAID sync
