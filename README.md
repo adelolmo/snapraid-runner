@@ -16,6 +16,6 @@ Precompiled binaries for released versions are available in the
 
 ### Ubuntu / Debian Repository
 
-snapraid-runner can also be install from my Ubuntu/Debian repository.
+`snapraid-runner` can also be install from my Ubuntu/Debian repository.
 
 Follow the instructions [here](https://adelolmo.github.io).
