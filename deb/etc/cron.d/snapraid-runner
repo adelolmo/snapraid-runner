@@ -1,1 +1,1 @@
-0 1 * * *   root    python2 /opt/snapraid-runner/snapraid-runner.py -c /etc/snapraid-runner.conf
+0 1 * * *   root    python3 /opt/snapraid-runner/snapraid-runner.py -c /etc/snapraid-runner.conf
