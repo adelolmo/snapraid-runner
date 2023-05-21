@@ -1,4 +1,4 @@
-#MAKEFLAGS += --silent
+MAKEFLAGS += --silent
 
 BUILD_DIR = build-debian
 RELEASE_DIR := $(realpath $(CURDIR)/..)
@@ -18,8 +18,6 @@ prepare:
 
 cp:
 	cp -R deb/* $(TMP_DIR)
-	#cp $(TAR_CACHE) $(TMP_DIR)/$(APP_HOME)
-	#rm -rf $(TMP_DIR)/$(APP_HOME)/$(TAR_FILE)
 
 control:
 	$(eval SIZE=$(shell du -sbk $(TMP_DIR)/ | grep -o '[0-9]*'))
